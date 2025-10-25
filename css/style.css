@@ -1,0 +1,140 @@
+/* Variáveis para cores (ajuste conforme o tom exato) */
+:root {
+    /* Cor de fundo principal (azul claro da imagem) */
+    --bg-color: #DDE6F3; 
+    /* Cor de texto mais escuro (para o nome) */
+    --text-dark: #333333; 
+    /* Cor de texto mais suave (para o cargo e links) */
+    --text-light: #707070; 
+    /* Cor base para ícones/links (azul, combinando com o fundo) */
+    --icon-color: #4C72B0; 
+}
+
+/* Reset básico e estilo de corpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte padrão */
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Container principal para centralizar e limitar a largura (como um cartão) */
+.card-container {
+    width: 90%;
+    max-width: 400px; /* Limite a largura para visual de celular/cartão */
+    padding: 40px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* --- Seção de Perfil (Foto e Nome) --- */
+
+.profile-section {
+    margin-bottom: 40px;
+}
+
+.profile-image-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* Sombreamento para destacar a foto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    color: var(--text-dark);
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.role {
+    color: var(--text-light);
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+/* --- Seção de Contato (Ícones) --- */
+
+.contact-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-dark); /* Cor do texto (label) */
+    transition: color 0.3s;
+}
+
+.contact-item:hover {
+    color: var(--icon-color); /* Efeito ao passar o mouse */
+}
+
+.icon {
+    font-size: 2.5em; /* Tamanho dos ícones */
+    color: var(--icon-color);
+    margin-bottom: 5px;
+    transition: transform 0.3s;
+}
+
+.contact-item:hover .icon {
+    transform: scale(1.1);
+}
+
+.label {
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+/* --- Exibição do Telefone --- */
+
+.phone-display {
+    margin-bottom: 40px;
+}
+
+.phone-number {
+    font-size: 1.1em;
+    color: var(--text-light); /* Cor semelhante aos textos de contato da imagem 2 */
+    text-decoration: none;
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--text-light); /* Simula o sublinhado */
+    transition: color 0.3s;
+}
+
+.phone-number:hover {
+    color: var(--icon-color);
+    border-bottom-color: var(--icon-color);
+}
+
+
+/* --- Seção do Logo JD --- */
+
+.logo-section {
+    /* Centralizado automaticamente */
+}
+
+.jd-logo {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
